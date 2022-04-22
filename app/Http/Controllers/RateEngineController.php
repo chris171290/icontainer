@@ -4,10 +4,11 @@ namespace App\Http\Controllers;
 
 use Carbon\Carbon;
 use Illuminate\Http\JsonResponse;
+use Illuminate\Http\Request;
 
 class RateEngineController extends Controller
 {
-    public function calculateRate ($origin, $destination, $container): JsonResponse
+    public function calculateRate (string $origin,string $destination, string $container): JsonResponse
     {
 
         $arrayCarrierJSON = array(

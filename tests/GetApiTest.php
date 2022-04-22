@@ -11,8 +11,9 @@ class GetApiTest extends TestCase
     // test if the number of containers is missing
     // test if the route response 200 code OK
 
-    public function testIfOriginIsMissing (){
-        $this->get('api/v1/quote/rates/{origin}/{destination}/{container}',['origin'=>'esvlc','destination'=>'','container'=>''])
+    public function testRequiredParameters (){
+        $this->get('api/v1/quote/rates/{origin}/{destination}/{container}',
+            ['origin'=>'','destination'=>'','container'=>''])
             ->assertStatus(200);
 
 

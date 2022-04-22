@@ -38,6 +38,7 @@
         }
     },
     "scripts": {
+        "phpunit": "vendor/bin/phpunit --colors=always --verbose",
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
             "@php artisan package:discover --ansi"
